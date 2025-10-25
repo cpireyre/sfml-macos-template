@@ -1,2 +1,24 @@
+# Build artifacts
 .sfml
+a.out
+*.o
+*.dylib
+*.so
+*.a
+
+# Editor
 *.swp
+.vscode/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+*Targets.cmake
+*.internal
+
+# Generated Makefiles (keep root Makefile)
+/SFML-*/Makefile
+/SFML-*/src/**/Makefile

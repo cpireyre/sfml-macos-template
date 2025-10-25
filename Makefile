@@ -3,6 +3,7 @@ sfml_lib := $(sfml_dir)/lib
 CPPFLAGS := -I$(sfml_dir)/include
 LDFLAGS  := -L$(sfml_lib) -Wl,-rpath,$(sfml_lib)
 LIBS 		 := -lsfml-graphics -lsfml-window -lsfml-system
+.DEFAULT_GOAL := all
 
 .sfml:
 	@echo "Configuring & compiling SFML from source"
@@ -10,9 +11,11 @@ LIBS 		 := -lsfml-graphics -lsfml-window -lsfml-system
 	touch .sfml
 
 name := a.out
-.DEFAULT_GOAL := $(name)
 $(name): .sfml main.cpp
 	clang++ $(CPPFLAGS) $(LDFLAGS) main.cpp $(LIBS) -o $(name)
+
+.PHONY: all
+all: $(name)
 	./$(name)
 
 .PHONY: clean
