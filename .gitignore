@@ -22,3 +22,5 @@ CPackSourceConfig.cmake
 # Generated Makefiles (keep root Makefile)
 /SFML-*/Makefile
 /SFML-*/src/**/Makefile
+SFML-2.6.2/src/SFML/CMakeFiles/CMakeDirectoryInformation.cmake
+SFML-2.6.2/src/SFML/Makefile
