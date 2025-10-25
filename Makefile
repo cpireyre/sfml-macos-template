@@ -17,7 +17,7 @@ $(name): .sfml main.cpp
 
 .PHONY: clean
 clean:
-	$(RM) .sfml
+	$(RM) .sfml $(sfml_dir)/CMakeCache.txt
 	make -C $(sfml_dir) clean
 
 .PHONY: fclean
