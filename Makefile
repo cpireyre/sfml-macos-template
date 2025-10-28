@@ -1,6 +1,6 @@
 sfml_dir := ./SFML-2.6.2
 sfml_lib := $(sfml_dir)/lib
-CPPFLAGS := -I$(sfml_dir)/include
+CPPFLAGS := -I$(sfml_dir)/include -std=c++17
 LDFLAGS  := -L$(sfml_lib) -Wl,-rpath,$(sfml_lib)
 LIBS 		 := -lsfml-graphics -lsfml-window -lsfml-system
 .DEFAULT_GOAL := all
